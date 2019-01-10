@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html 
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:mvcb="http://webns.net/mvcb/"
+  xml:lang="en"
+> 
+
+  <head>
+    <title>Appearances Ontology Specification - ONTOLOGY_VERSION</title>
+    <meta http-equiv="content-type" content="text/xhtml+xml; charset=utf-8" />
+    <!-- With Apologies to Dan Brickley and Libby Miller -->
+    <link href="xmlns-style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet"  type="text/css" />
+    <link rel="mvcb:generatorAgent" type="application/rdf+xml" title="DOAP" href="http://rdfohloh.wikier.org/project/specgen" />
+  </head>
+
+  <body>
+
+    <h1 id="title">Appearances Ontology Specification - ONTOLOGY_VERSION - Halloween Edition</h1>
+
+    <h2 id="subtitle">An ontology about sex, gender, skin, eye and hair colour.</h2>
+
+    <h3 id="mymw-doctype">Working Draft &mdash; ONTOLOGY_LONGDATE</h3>
+
+    <dl>
+
+      <dt>This version:</dt>
+      <dd><a
+      href="http://rdf.muninn-project.org/ontologies/appearances-ONTOLOGY_DATE.html">http://rdf.muninn-project.org/ontologies/appearances-ONTOLOGY_DATE.html</a>
+     (<a href="http://rdf.muninn-project.org/ontologies/appearances-ONTOLOGY_DATE.owl">owl</a>)</dd>
+
+      <dt>Latest version:</dt>
+      <dd><a href="http://rdf.muninn-project.org/ontologies/appearances.html">http://rdf.muninn-project.org/ontologies/appearances.html</a>
+      (<a
+      href="http://rdf.muninn-project.org/ontologies/appearances.owl">owl</a>)
+      </dd>
+
+
+      <dt>Last Update: ONTOLOGY_VERSION</dt>
+      <dd>Date: ONTOLOGY_LONGDATE</dd>
+
+      <dt>Authors:</dt>
+      <dd>Robert Warren</dd>
+      <dd>Adriel Dean-Hall</dd>
+
+    </dl>
+
+    <p class="copyright"><a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">
+    <img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png" />
+    </a><br/>This work is licensed under a 
+    <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons / Attribution-ShareAlike 3.0 Unported License</a>.</p>
+
+    <!-- ===================================================================== -->
+
+    <hr />
+    <h2 id="abstract">Abstract</h2>
+    <p>
+      The appearances ontology is a collection of classes, instances and properties that encode knowledge about a 
+      person apperance, sex, gender and preferences.  While some of the </p>
+
+    <h2 id="contents">Table of Contents</h2>    
+    <ul id="toc">
+      <li><a href="#intro">1. Introduction</a>
+    </ul>
+
+<!--    <h3>Appendixes</h3>
+    <ol id="appendix" style="list-style-type:upper-alpha;">
+      <li><a href="#references">Normative References</a></li>
+      <li><a href="#changes">Changes in this version</a> (Non-Normative)</li>
+      <li><a href="#acknowledgements">Acknowledgements</a> (Non-Normative)</li>
+    </ol>-->
+
+    <hr />
+
+    <!-- ===================================================================== -->
+    <h2 id="intro">1. Introduction</h2>
+    
+    integration of other standards.
+    
+    <h3 id="colors">A note on colors</h3>
+
+    <p>Color is complex and ambiguous thing that depends as much on the perception of the person and as on the capability of the
+    color producing device.  Futhermore, not all of the scales used to measure hair, eye or skin color are accurante even by
+    experts in the field.  Users of this ontologies should use the terms that are most familiar to them to avoid ambiguity.</p>
+
+   <h3 id="labelsandvalues">Labels, values, terms and names</h3>
+       <p>Terms also use skos like labelling </p>
+
+   <h3 id="observedandselfreported">Observed and self-reported values</h3>
+
+
+   <h3 id="measurements">A note on measurements, datatypes, units and scales</h3>
+
+	<p>There has been some contraversy on the appropriate means of specifying units of measurements within ontologies. These
+	have included the explicit specification of the unit as part of the property semantics, the creation of new datatypes
+	which have additional unit semantics or the use of a special ontology that represents units of measurements.</p>
+	<p>This ontology makes use of explicit, unit-specific data properties in decimal inches and meters that are
+	sub-properties of a generic property.</p>
+          
+    <!-- ===================================================================== -->
+
+    <h3 id="termlist">4.1. List of ontology terms: </h3>
+    
+    <!-- The list of classes and properties goes here -->
+    %s
+    <!-- End of the terms list -->
+
+
+     <h2 id="#usecase">5. Ontology use cases</h2>      
+
+     <h2 id="#usecase">5. Ontology use cases</h2>      
+
+<div class="example" style="white-space: pre-wrap;" id="basic">
+<pre>    
+ &lt;foaf:Person rdf:about=""&gt;
+  &lt;foaf:name&gt;Albert D. J. Cashier&lt;/foaf:name&gt;
+  &lt;foaf:nick&gt;Jennie Irene Hodgers&lt;/foaf:nick&gt;
+  &lt;foaf:birthday rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;18431225&lt;/foaf:birthday&gt;    
+  &lt;foaf:deathday rdf:datatype="http://www.w3.org/2001/XMLSchema#date"&gt;19150910&lt;/foaf:deathday&gt;    
+  &lt;appearances:hasSex rdf:resource="http://rdf.muninn-project.org/ontologies/appearances#SexTypingXX"/&gt;
+  &lt;appearances:hasGender rdf:resource="http://rdf.muninn-project.org/ontologies/appearances#SimpleGender-M"/&gt;
+  &lt;appearances:hasAppearance rdf:resource="http://rdf.muninn-project.org/ontologies/appearances#SimpleGender-M"/&gt;
+  &lt;appearances:hasAppearance rdf:resource="Whiet Skit"/&gt;
+  &lt;graves:hisRemains rdf:resource=""&gt;
+  &lt;owl:sameAs rdf:resource="http://dbpedia.org/Albert_Cashier"/&gt;  
+  &lt;mil:heldRank rdf:resource=""/&gt;
+ &lt;foaf:Person&gt;
+ &lt;graves:Cemetery rdf:about=""&gt;
+ &lt;rdfs:label xml:lang="en"&gt;Sunnyslope Cemetery (Saunemin, USA)&lt;/rdfs:label&gt;
+ &lt;graves:siteName&gt;Sunnyslope Cemetery&lt;/graves:siteName&gt;
+ &lt;graves:hasLocation&gt;
+  &lt;geo:Point rdf:about=""&gt;
+   &lt;geo:lat&gt;40.890012&lt;geo:lat&gt;4
+   &lt;geo:long&gt;-88.411016&lt;geo:long&gt;
+  &lt;/geo:Point&gt;
+ &lt;/graves:hasLocation&gt;
+ &lt;gn:locatedIn rdf:resource="http://sws.geonames.org/4910644/"/&gt;
+ <!-- Saunemin,Illinois, USA -->
+ &lt;graves:Cemetery&gt;
+</pre>
+</div>
+ 
+     <H2>Appearances:</H2>
+
+     
+<h3 id="#skincolor">Skin Color Standards and References</h3>
+
+The <a href="http://humanae.tumblr.com">Humanae website</a>, an art project attempts to match the skintone againts Pantone colour schemes.
+
+<p> Fitzpatrick Skin Types definitions:
+<a href="#term_FitzpatrickSkinColorTypeI">Albino, White, Very Fair, Freckles</a>, 
+<a href="#term_FitzpatrickSkinColorTypeII">White, Fair, Light-skinned European</a>, 
+<a href="#term_FitzpatrickSkinColorTypeIII">Light intermediate, Dark-skinned European</a>, 
+<a href="#term_FitzpatrickSkinColorTypeIV">Dark intermediate, Olive Skin, Mediterranean, Beige with a brown tint, Mediterranean Caucasian</a>, 
+<a href="#term_FitzpatrickSkinColorTypeV">Dark, Brown, Dark brown</a>, 
+<a href="#term_FitzpatrickSkinColorTypeVI">Very Dark, Black</a>
+.</p>
+<p>Von Luschan Skin Color definitions:
+1. <a href="#term_VonLuschan1" style="color : #F4F2F5;">Von Luschan Skin Color</a>, 
+2. <a href="#term_VonLuschan2" style="color : #EEEDEB;">Von Luschan Skin Color</a>, 
+3. <a href="#term_VonLuschan3" style="color : #FAF9F7;">Von Luschan Skin Color</a>, 
+4. <a href="#term_VonLuschan4" style="color : #FDFBE6;">Von Luschan Skin Color</a>, 
+5. <a href="#term_VonLuschan5" style="color : #FDF6E6;">Von Luschan Skin Color</a>, 
+6. <a href="#term_VonLuschan6" style="color : #FEF7E5;">Von Luschan Skin Color</a>, 
+7. <a href="#term_VonLuschan7" style="color : #FAF0EF;">Von Luschan Skin Color</a>, 
+8. <a href="#term_VonLuschan8" style="color : #F3EAE5;">Von Luschan Skin Color</a>, 
+9. <a href="#term_VonLuschan9" style="color : #F4F1EA;">Von Luschan Skin Color</a>, 
+10. <a href="#term_VonLuschan10" style="color : #FBFCF4;">Von Luschan Skin Color</a>, 
+11. <a href="#term_VonLuschan11" style="color : #FBF7EB;">Von Luschan Skin Color</a>, 
+12. <a href="#term_VonLuschan12" style="color : #FEF6E3;">Von Luschan Skin Color</a>, 
+13. <a href="#term_VonLuschan13" style="color : #FFF9E1;">Von Luschan Skin Color</a>, 
+14. <a href="#term_VonLuschan14" style="color : #FFF9E1;">Von Luschan Skin Color</a>, 
+15. <a href="#term_VonLuschan15" style="color : #F1E7C3;">Von Luschan Skin Color</a>, 
+16. <a href="#term_VonLuschan16" style="color : #EFE2AD;">Von Luschan Skin Color</a>, 
+17. <a href="#term_VonLuschan17" style="color : #E0D293;">Von Luschan Skin Color</a>, 
+18. <a href="#term_VonLuschan18" style="color : #EFE39B;">Von Luschan Skin Color</a>, 
+19. <a href="#term_VonLuschan19" style="color : #E7D39E;">Von Luschan Skin Color</a>, 
+20. <a href="#term_VonLuschan20" style="color : #EED885;">Von Luschan Skin Color</a>, 
+21. <a href="#term_VonLuschan21" style="color : #E3C467;">Von Luschan Skin Color</a>, 
+22. <a href="#term_VonLuschan22" style="color : #E1C16A;">Von Luschan Skin Color</a>, 
+23. <a href="#term_VonLuschan23" style="color : #DFC17B;">Von Luschan Skin Color</a>, 
+24. <a href="#term_VonLuschan24" style="color : #DEBB67;">Von Luschan Skin Color</a>, 
+25. <a href="#term_VonLuschan25" style="color : #C7A464;">Von Luschan Skin Color</a>, 
+26. <a href="#term_VonLuschan26" style="color : #BC9762;">Von Luschan Skin Color</a>, 
+27. <a href="#term_VonLuschan27" style="color : #9C6B43;">Von Luschan Skin Color</a>, 
+28. <a href="#term_VonLuschan28" style="color : #8E583E;">Von Luschan Skin Color</a>, 
+29. <a href="#term_VonLuschan29" style="color : #7B4C2E;">Von Luschan Skin Color</a>, 
+30. <a href="#term_VonLuschan30" style="color : #613214;">Von Luschan Skin Color</a>.</p>
+
+<h3 id="#haircolor">Hair Color Standards and References</h3>
+
+<p>FBI Hair Color definitions:
+<a href="#term_RCMPHairColorBald">Bald</a>, 
+<a href="#term_RCMPHairColorBlack">Black</a>, 
+<a href="#term_RCMPHairColorBlond">Blond</a>, 
+<a href="#term_RCMPHairColorBrown">Brown</a>, 
+<a href="#term_RCMPHairColorGrey">Grey / Gray</a>, 
+<a href="#term_RCMPHairColorLightBrown">Light Brown</a>, 
+<a href="#term_RCMPHairColorLightRed">Red</a>, 
+<a href="#term_RCMPHairColorLightStrawberryRed">Strawberry Red</a>, 
+<a href="#term_RCMPHairColorWhite">White</a>
+.</p>
+
+<p>FBI Hair Color definitions:
+<a href="#term_FBIHairColorBLD">Bald</a>, 
+<a href="#term_FBIHairColorBLK">Black</a>, 
+<a href="#term_FBIHairColorBLN">Blonde / Strawberry</a>, 
+<a href="#term_FBIHairColorBLU">Blue</a>, 
+<a href="#term_FBIHairColorBRO">Brown</a>, 
+<a href="#term_FBIHairColorGRN">Green</a>, 
+<a href="#term_FBIHairColorGRY">Grey/Gray</a>, 
+<a href="#term_FBIHairColorONG">Orange</a>, 
+<a href="#term_FBIHairColorPLE">Purple</a>, 
+<a href="#term_FBIHairColorPNK">Pink</a>, 
+<a href="#term_FBIHairColorRED">Red/Auburn</a>, 
+<a href="#term_FBIHairColorSDY">Sandy</a>, 
+<a href="#term_FBIHairColorWHI">White</a>, 
+<a href="#term_FBIHairColorUNKNOWN">Unknown</a>
+.</p>
+
+<p>Nebraska Department Motor Vehicules Eye Color definitions:
+<a href="#term_NebraskaDMVGrayHair">Gray</a>, 
+<a href="#term_NebraskaDMVBrownHair">Brown</a>, 
+<a href="#term_NebraskaDMVWhiteHair">White</a>, 
+<a href="#term_NebraskaDMVBaldHair">Bald</a>, 
+<a href="#term_NebraskaDMVRedHair">Red</a>, 
+<a href="#term_NebraskaDMVSandyHair">Sandy</a>, 
+<a href="#term_NebraskaDMVBlondeHair">Blonde</a>, 
+<a href="#term_NebraskaDMVUnknownHair">Unknown</a>.</p>
+
+
+<h3 id="#eyecolor">Eye Color Standards and References</h3>
+
+<p>The Simple Eye Color definitions:
+<a href="#term_SimpleEyeColorBlack">Black</a>,
+<a href="#term_SimpleEyeColorBlue">Blue</a>,
+<a href="#term_SimpleEyeColorBrown">Brown</a>,
+<a href="#term_SimpleEyeColorGrey">Grey</a>,
+<a href="#term_SimpleEyeColorGreen">Green</a>,
+<a href="#term_SimpleEyeColorRed">Red</a>.
+
+
+
+<p>Nebraska Department Motor Vehicules Eye Color definitions:  
+<a href="#term_NebraskaDMVBlackEye">Black</a>, 
+<a href="#term_NebraskaDMVBlueEye">Blue</a>, 
+<a href="#term_NebraskaDMVBrownEye">Brown</a>, 
+<a href="#term_NebraskaDMVGrayEye">Gray</a>, 
+<a href="#term_NebraskaDMVGreenEye">Green</a>, 
+<a href="#term_NebraskaDMVHazelEye">Hazel</a>, 
+<a href="#term_NebraskaDMVDichromaticEye">Dichromatic</a>, 
+<a href="#term_NebraskaDMVPinkEye">Pink</a>, 
+<a href="#term_NebraskaDMVUnknownEye">Unknown</a>.</p>
+
+<p>Martin Schultz Eye Color definitions:
+<a href="#term_MartinSchultz1aEye">Light Blue Iris (1a)</a>, 
+<a href="#term_MartinSchultz1bEye">Light Blue Iris (1b)</a>, 
+<a href="#term_MartinSchultz1cEye">Light Blue Iris (1c)</a>, 
+<a href="#term_MartinSchultz2aEye">Light Blue Iris (2a)</a>, 
+<a href="#term_MartinSchultzLightBlueEye">Light Blue Iris</a>, 
+<a href="#term_MartinSchultz2bEye">Dark Blue Iris (2b)</a>, 
+<a href="#term_MartinSchultz3Eye">Blue Gray Iris (3)</a>, 
+<a href="#term_MartinSchultz5Eye">Blue Gray Iris (5)</a>, 
+<a href="#term_MartinSchultz4aEye">Gray Iris (4a)</a>, 
+<a href="#term_MartinSchultz4bEye">Gray Iris (4b)</a>, 
+<a href="#term_MartinSchultz6Eye">Gray (6)</a>, 
+<a href="#term_MartinSchultz7Eye">Yellow Brown and Brown Green (7)</a>, 
+<a href="#term_MartinSchultz8Eye">Yellow Brown and Brown Green (8)</a>, 
+<a href="#term_MartinSchultz9Eye">Yellow Brown and Brown Green (9)</a>, 
+<a href="#term_MartinSchultz10Eye">Yellow Brown and Brown Green (10)</a>, 
+<a href="#term_MartinSchultz11Eye">Yellow Brown and Brown Green (11)</a>, 
+<a href="#term_MartinSchultz12Eye">Dark Brown and Brown Black (12)</a>, 
+<a href="#term_MartinSchultz13Eye">Dark Brown and Brown Black (13)</a>, 
+<a href="#term_MartinSchultz14Eye">Dark Brown and Brown Black (14)</a>, 
+<a href="#term_MartinSchultz15Eye">Dark Brown and Brown Black (15)</a>, 
+<a href="#term_MartinSchultz16Eye">Dark Brown and Brown Black (16)</a>.</p>
+
+<p>FBI / RCMP Eye Color definitions:
+<a href="#term_FBIEyeColorBLK">Black</a>,
+<a href="#term_FBIEyeColorBLU">Blue</a>,
+<a href="#term_FBIEyeColorBRO">Brown</a>,
+<a href="#term_FBIEyeColorGRY">Grey/Gray</a>,
+<a href="#term_FBIEyeColorGRN">Green</a>,
+<a href="#term_FBIEyeColorHAZ">Hazel</a>,
+<a href="#term_FBIEyeColorMAR">Maroon</a>.</p>        
+
+
+
+<h3 id="#bodymeasurement">Body Measurements</h3>
+
+<p>The measurements are done in both in Inches and Meters. 
+</p>
+
+
+    <!-- ===================================================================== -->
+
+    <h2 id="reference">7. Cross-reference for Appearances classes and properties</h2>
+ 
+    <p></p>
+
+    <!-- The following is the script-generated list of classes and properties -->
+    %s
+    <!-- End of the terms list -->
+
+    <h2 id="#conclusion">8.Conclusion and Future Work</h2>
+    </table>
+
+    <h2 id="version_history">Version History</h2>
+
+    <ul>
+    <li>0.1 - Initial unstable release.</li>
+    </ul>
+    
+    <!-- ===================================================================== 
+
+
+    <h2 id="references">A References</h2>
+
+    <dl>
+      <dt class="label" id="ref-some">name</dt>
+      <dd><em><a href="http://.../">long name</a></em> description...</dd>
+    </dl>
+
+    <h3 id="references-other">A.2 Other references</h3>
+
+    <dl>
+      <dt class="label" id="ref-rfc2119">IETF RFC 2119</dt>
+      <dd>
+        <em><a href="http://www.ietf.org/rfc/rfc2119.txt">RFC 2119: Key words
+        for use in RFCs to Indicate Requirement Levels</a></em>. Internet
+        Engineering Task Force, 1997 (see http://www.ietf.org/rfc/rfc2119.txt).
+      </dd>
+    </dl>
+
+     ===================================================================== -->
+
+
+  </body>
+
+</html>
+
